@@ -62,17 +62,40 @@ var_dump($arrayGatto);
   </head>
   <body>
     <h1>Hello, world!</h1>
-
-    <?php foreach( $arrayCane as $element ) { ?>
-      <div class="card" style="width: 18rem;">
-        <img src="<?php echo $element->img  ?>" class="card-img-top" alt="...">
-        <div class="card-body">
-          <h5 class="card-title"><?php echo $element->name  ?></h5>
-          <p class="card-text"><?php echo $element->tipo  ?></p>
-          <span><?php echo $element->categoria->cona  ?></span>
+  <div class="container">
+    <div class="row">
+      <?php foreach( $arrayCane as $element ) { ?>
+        <div class="col-lg-3">
+          <div class="card" style="width: 18rem;">
+            <img src="<?php echo $element->img  ?>" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title"><?php echo $element->name  ?></h5>
+              <p class="card-text"><?php echo $element->tipo  ?></p>
+              <span class="bg-dark"><?php echo $cane->icona  ?></span>
+            </div>
+          </div>
         </div>
-      </div>
-    <?php } ?>
+      <?php } ?>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="row">
+      <?php foreach( $arrayGatto as $element ) { ?>
+        <div class="col-lg-3">
+          <div class="card" style="width: 18rem;">
+            <img src="<?php echo $element->img  ?>" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title"><?php echo $element->name  ?></h5>
+              <p class="card-text"><?php echo $element->tipo  ?></p>
+              <span class="bg-dark"><?php echo $gatto->icona  ?></span>
+            </div>
+          </div>
+        </div>
+      <?php } ?>
+    </div>
+  </div>
+
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
   </body>
