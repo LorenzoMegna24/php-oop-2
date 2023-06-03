@@ -63,6 +63,16 @@ var_dump($arrayGatto);
   <body>
     <h1>Hello, world!</h1>
 
+    <?php foreach( $arrayCane as $element ) { ?>
+      <div class="card" style="width: 18rem;">
+        <img src="<?php echo $element->img  ?>" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title"><?php echo $element->name  ?></h5>
+          <p class="card-text"><?php echo $element->tipo  ?></p>
+          <span><?php echo $element->categoria->cona  ?></span>
+        </div>
+      </div>
+    <?php } ?>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
   </body>
